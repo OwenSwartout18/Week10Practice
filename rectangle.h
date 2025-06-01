@@ -16,6 +16,8 @@ public:
 	virtual string ToString()const;
 	virtual double Area()const;
 	virtual double Perimeter()const;
+	double GetBase() const;
+	double GetHeight() const;
 };
 
 

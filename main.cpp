@@ -5,6 +5,8 @@
 #include "circle.h"
 #include "rectangle.h"
 #include "square.h"
+#include "equilateral.h"
+#include "rhombus.h"
 
 #include <iostream>
 #include <vector>
@@ -76,8 +78,26 @@ int main() {
 				}
 			}
 		}else if (menuOption == 8){ // List all Triangles
+			cout << "Only Triangles" << endl;
+			for (Shape* shape: shapes){
+				if (dynamic_cast<Triangle*>(shape) != nullptr) {
+					cout << shape->ToString() << endl;
+					cout << "\tPerimeter: " << shape->Perimeter() << endl;
+					cout << "\tArea:      " << shape->Area() << endl;
+					cout << endl;
+				}
+			}
 
 		}else if (menuOption == 9){ // List all Rectangles
+			cout << "Only Rectangles" << endl;
+			for (Shape* shape: shapes){
+				if (dynamic_cast<Rectangle*>(shape) != nullptr) {
+					cout << shape->ToString() << endl;
+					cout << "\tPerimeter: " << shape->Perimeter() << endl;
+					cout << "\tArea:      " << shape->Area() << endl;
+					cout << endl;
+				}
+			}
 
 		}else if (menuOption == 10){ // List all shapes
 			for (Shape* shape: shapes){
